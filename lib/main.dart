@@ -12,15 +12,11 @@ class MyApp extends StatelessWidget{
       debugShowCheckedModeBanner: false,
       title: appTitle,
       home: Scaffold(
-        appBar:AppBar(title:const Text(appTitle,style: TextStyle(color: Colors.red),),centerTitle: true,),
+        appBar:AppBar(title:const Text(appTitle,style: TextStyle(color: Colors.white),),centerTitle: true,backgroundColor: Colors.purple,),
         backgroundColor:Colors.grey[300],
-        body:const SingleChildScrollView(child: Column(children: [ImageSection(image: 'assets/images/lake.jpg'),TitleSection(name: "Oeschinen Lake Campground", location:"Kandersteg, Switzerland"),ButtonSection(),TextSection(description:'Lake Oeschinen lies at the foot of the Blüemlisalp in the '
-            'Bernese Alps. Situated 1,578 meters above sea level, it '
-            'is one of the larger Alpine Lakes. A gondola ride from '
-            'Kandersteg, followed by a half-hour walk through pastures '
-            'and pine forest, leads you to the lake, which warms to 20 '
-            'degrees Celsius in the summer. Activities enjoyed here '
-            'include rowing, and riding the summer toboggan run.')],),),
+        body:const SingleChildScrollView(child: Column(children: [
+          ImageSection(image: 'assets/images/lake2.jpg'),
+          TitleSection(name: "Lake Nakuru", location:'Nakuru,Kenya'),ButtonSection(),TextSection(description:'Located in the Great Rift Valley, Lake Nakuru sits at an elevation of 1,745 m, and it is famous for the vast numbers of flamingos that feed off its algae. Lake Nakuru varies in size according to rainfall, and its surface area varies between 5-45 km².\nThe park lies south of Nakuru, the fourth-largest settlement in Kenya. Feeding pressures and pollution have reduced the flamingo population in recent years, but there are now signs of recovery.\nLake Nakuru National Park is also home to a large rhino population. These beasts can often be spotted lazing under the shade of the luscious acacia trees that surround the lake.\nSurrounded by waterfalls, cliffs, and forests, the lake is a vital water source for zebra, buffalo, and the endangered Rothschild giraffe.')],),),
       ),
     );
   }
@@ -39,8 +35,8 @@ class TitleSection extends StatelessWidget{
         Expanded(child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(padding: const EdgeInsets.only(bottom: 8),child: Text(name,style: const TextStyle(fontWeight: FontWeight.bold),),),
-            Text(location,style: TextStyle(color: Colors.grey[500]),),
+            Padding(padding: const EdgeInsets.only(bottom: 8),child: Text(name,style: const TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),),
+            Text(location,style: TextStyle(color: Colors.grey[500],fontSize: 17),),
 
           ],
         )),
@@ -81,7 +77,7 @@ class TextSection extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return Padding(padding: EdgeInsets.all(20),
-      child: Text(description,softWrap: true,),
+      child: Text(description,softWrap: true,style: TextStyle(fontSize: 15),),
     
     
     );
@@ -93,7 +89,7 @@ class ImageSection extends StatelessWidget{
   final String image;
   @override
   Widget build(BuildContext context){
-    return Padding(padding: EdgeInsets.all(10),child: Image.asset(image,width: 600,height: 350,fit: BoxFit.cover,));
+    return Padding(padding: EdgeInsets.only(top: 3),child: Image.asset(image,width: 600,height: 350,fit: BoxFit.cover,));
   }
 }
 //button with text class widget
@@ -115,7 +111,7 @@ class ButtonWithText extends StatelessWidget{
       children: [
         Icon(icon,color: color,),
         Padding(padding: EdgeInsets.only(top:4),
-          child: Text(label,style: TextStyle(fontWeight:FontWeight.w400,color: color),),
+          child: Text(label,style: TextStyle(fontWeight:FontWeight.w400,color: color,),),
 
         ),
       ],
