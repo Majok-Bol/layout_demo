@@ -80,14 +80,22 @@ class TextSection extends StatelessWidget{
   final String description;
   @override
   Widget build(BuildContext context){
-    return Padding(padding: EdgeInsets.all(10),
+    return Padding(padding: EdgeInsets.all(32),
       child: Text(description,softWrap: true,),
     
     
     );
   }
 }
-
+//image section widget
+class ImageSection extends StatelessWidget{
+  const ImageSection({super.key,required this.image});
+  final String image;
+  @override
+  Widget build(BuildContext context){
+    return Image.asset(image,width: 600,height: 240,fit: BoxFit.cover,);
+  }
+}
 //button with text class widget
 class ButtonWithText extends StatelessWidget{
   const ButtonWithText({super.key,
