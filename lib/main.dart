@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget{
       home: Scaffold(
         appBar:AppBar(title:const Text(appTitle,style: TextStyle(color: Colors.red),),centerTitle: true,),
         // backgroundColor:Colors.grey,
-        body:const SingleChildScrollView(child: Column(children: [TitleSection(name: "Oeschinen Lake Campground", location:"Kandersteg, Switzerland")],),),
+        body:const SingleChildScrollView(child: Column(children: [TitleSection(name: "Oeschinen Lake Campground", location:"Kandersteg, Switzerland"),ButtonSection()],),),
       ),
     );
   }
