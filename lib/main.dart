@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget{
       home: Scaffold(
         appBar:AppBar(title:const Text(appTitle,style: TextStyle(color: Colors.red),),centerTitle: true,),
         // backgroundColor:Colors.grey,
-        body:const SingleChildScrollView(child: Column(children: [TitleSection(name: "Oeschinen Lake Campground", location:"Kandersteg, Switzerland"),ButtonSection(),TextSection(description:'Lake Oeschinen lies at the foot of the Blüemlisalp in the '
+        body:const SingleChildScrollView(child: Column(children: [ImageSection(image: 'assets/images/lake.jpg'),TitleSection(name: "Oeschinen Lake Campground", location:"Kandersteg, Switzerland"),ButtonSection(),TextSection(description:'Lake Oeschinen lies at the foot of the Blüemlisalp in the '
             'Bernese Alps. Situated 1,578 meters above sea level, it '
             'is one of the larger Alpine Lakes. A gondola ride from '
             'Kandersteg, followed by a half-hour walk through pastures '
