@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget{
       title: appTitle,
       home: Scaffold(
         appBar:AppBar(title:const Text(appTitle,style: TextStyle(color: Colors.red),),centerTitle: true,),
-        // backgroundColor:Colors.grey,
+        backgroundColor:Colors.grey[300],
         body:const SingleChildScrollView(child: Column(children: [ImageSection(image: 'assets/images/lake.jpg'),TitleSection(name: "Oeschinen Lake Campground", location:"Kandersteg, Switzerland"),ButtonSection(),TextSection(description:'Lake Oeschinen lies at the foot of the Blüemlisalp in the '
             'Bernese Alps. Situated 1,578 meters above sea level, it '
             'is one of the larger Alpine Lakes. A gondola ride from '
@@ -80,7 +80,7 @@ class TextSection extends StatelessWidget{
   final String description;
   @override
   Widget build(BuildContext context){
-    return Padding(padding: EdgeInsets.all(32),
+    return Padding(padding: EdgeInsets.all(20),
       child: Text(description,softWrap: true,),
     
     
