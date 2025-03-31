@@ -11,6 +11,8 @@ class MyApp extends StatelessWidget{
       title: appTitle,
       home: Scaffold(
         appBar:AppBar(title:const Text(appTitle),),
+        backgroundColor:Colors.grey,
+        body: const Center(child: Text('Hello World'),),
       ),
     );
   }
