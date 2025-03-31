@@ -17,4 +17,26 @@ class MyApp extends StatelessWidget{
       ),
     );
   }
+
+}
+
+class TitleSection extends StatelessWidget{
+  const TitleSection({super.key,required this.name,required this.location});
+  final String name;
+  final String location;
+  @override
+  Widget build(BuildContext context){
+    return Padding(padding:const EdgeInsets.all(10),
+    child:Row(
+      children: [
+        Expanded(child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+
+          ],
+        ))
+      ],
+    ) ,
+    );
+  }
 }
