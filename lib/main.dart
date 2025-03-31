@@ -93,7 +93,7 @@ class ImageSection extends StatelessWidget{
   final String image;
   @override
   Widget build(BuildContext context){
-    return Image.asset(image,width: 600,height: 240,fit: BoxFit.cover,);
+    return Padding(padding: EdgeInsets.all(10),child: Image.asset(image,width: 600,height: 350,fit: BoxFit.cover,));
   }
 }
 //button with text class widget
