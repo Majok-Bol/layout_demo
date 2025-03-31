@@ -59,7 +59,7 @@ class ButtonSection extends StatelessWidget{
         children: [
           ButtonWithText(color: color, icon: Icons.call, label: 'CALL'),
           ButtonWithText(color: color, icon: Icons.near_me, label: 'Route'),
-          ButtonWithText(color: color, icon: Icons.call, label: 'CALL'),
+          ButtonWithText(color: color, icon: Icons.share, label: 'SHARE'),
 
         ],
       ),
