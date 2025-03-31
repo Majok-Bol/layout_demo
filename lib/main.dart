@@ -67,7 +67,23 @@ class ButtonSection extends StatelessWidget{
     );
   }
 }
+class ButtonSection extends StatelessWidget{
+  const ButtonSection({super.key,
+    required this.description;
 
+
+
+  });
+  final String description;
+  @override
+  Widget build(BuildContext context){
+    return Padding(padding: EdgeInsets.all(10),
+      child: Text(description,softWrap: true,),
+    
+    
+    );
+  }
+}
 
 //button with text class widget
 class ButtonWithText extends StatelessWidget{
